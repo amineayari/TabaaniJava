@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="93.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.CommentaireItemsController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="805.0" spacing="50.0" style="-fx-background-color: #CEE1F4; -fx-background-radius: 5; -fx-background-insets: 0;">
+         <children>
+            <ImageView fitHeight="54.0" fitWidth="58.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-administrator-male-100%20(2).png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Commentaire" prefHeight="40.0" prefWidth="385.0" text="Commentaire" textFill="#b7c3d7" />
+            <VBox prefHeight="117.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label fx:id="datelabel" prefHeight="17.0" prefWidth="127.0" text="Date" textFill="WHITE" />
+                  <HBox prefHeight="25.0" prefWidth="147.0" spacing="30.0">
+                     <children>
+                        <Label fx:id="likelabel" text="   Label" textFill="#16ba70">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label fx:id="dislikelibel" prefHeight="21.0" prefWidth="72.0" text="    Label" textFill="#ce2a2a">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="60.0" prefWidth="193.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#likebutton" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="51.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icons8-good-quality-100.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#dislikebutton" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="51.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icons8-good-quality-100%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#likebutton" prefHeight="47.0" prefWidth="39.0" style="-fx-background-color: #00000000;">
+               <graphic>
+                  <ImageView fx:id="supprimerButton" fitHeight="57.0" fitWidth="66.0" onDragDetected="#supprimerButton" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icons8-delete-bin-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

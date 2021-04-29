@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="999.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.CommentaireIndexController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="77.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="136.0" prefWidth="737.0" spacing="80.0" style="-fx-background-color: #CEE1F4; -fx-background-radius: 5; -fx-background-insets: 0;">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-administrator-male-100%20(2).png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="71.0" prefWidth="473.0">
+               <children>
+                  <Label fx:id="sujet" prefHeight="47.0" prefWidth="349.0" text="Label" textFill="#f8f4f4">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="description" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="375.56121826171875">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox prefHeight="95.0" prefWidth="166.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="91.0" text="Vues" textFill="#332a7c" />
+                  <HBox prefHeight="27.0" prefWidth="67.0" spacing="30.0">
+                     <children>
+                        <Label text="Label" textFill="#332a7c" />
+                        <Label text="Label" textFill="#332a7c" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="166.0" spacing="20.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="84.0" layoutY="231.0" prefHeight="281.0" prefWidth="723.0">
+        <content>
+          <AnchorPane>
+               <children>
+                  <VBox fx:id="listcommentaire" prefHeight="90.0" prefWidth="723.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <JFXTextArea fx:id="commentaireTextArea" focusColor="#332a7c" layoutX="85.0" layoutY="553.0" prefHeight="92.0" prefWidth="507.0" promptText="Ajouter un commentaire" unFocusColor="#332a7c" />
+      <Button fx:id="ajoutercommentaire" layoutX="626.0" layoutY="563.0" mnemonicParsing="false" onAction="#ajoutercommentaire" prefHeight="56.0" prefWidth="58.0" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="92.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icons8-add-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
