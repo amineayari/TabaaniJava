@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.EssaiiController">
+   <children>
+      <BarChart fx:id="Barchar" layoutX="74.0" layoutY="43.0" prefHeight="390.0" prefWidth="488.0">
+        <xAxis>
+          <CategoryAxis label="id Produit" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Nombre de commande" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button layoutX="563.0" layoutY="443.0" mnemonicParsing="false" onAction="#PDF" prefHeight="25.0" prefWidth="53.0" text="PDF" />
+   </children>
+</AnchorPane>

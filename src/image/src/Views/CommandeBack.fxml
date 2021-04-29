@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1081.0" style="-fx-background-color: #31307D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.CommandeBackController">
+   <children>
+      <AnchorPane prefHeight="102.0" prefWidth="1081.0" style="-fx-background-color: f82249;">
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="86.0" layoutX="39.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logotabaani.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="search" layoutX="700.0" layoutY="39.0" onInputMethodTextChanged="#ttest2" onKeyPressed="#test" onKeyReleased="#Search" onKeyTyped="#LettersOnly" prefHeight="26.0" prefWidth="240.0" promptText="Recherche" style="-fx-background-color: white; -fx-border-color: blue;" />
+            <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="956.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/searchcircularbutton_79274.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="Table_Commande" layoutX="225.0" layoutY="135.0" prefHeight="494.0" prefWidth="842.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="54.0" text="id" />
+          <TableColumn fx:id="nbproduit" prefWidth="164.0" text="nombre produit" />
+            <TableColumn fx:id="date" prefWidth="144.0" text="date" />
+            <TableColumn fx:id="methodepaiement" prefWidth="187.0" text="Methode de paiement" />
+            <TableColumn fx:id="etat" onEditCommit="#aaaaaaaa" prefWidth="132.0" text="Etat" />
+            <TableColumn fx:id="prixtotale" prefWidth="159.0" text="Prix Totale" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="EtatComande" layoutX="39.0" layoutY="320.0" prefWidth="150.0" />
+      <Label layoutX="97.0" layoutY="272.0" text="Etat" textFill="#cd0909">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="39.0" layoutY="382.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="150.0" text="Modifier" />
+      <Button layoutX="39.0" layoutY="470.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="150.0" text="Supprimer" />
+   </children>
+</AnchorPane>
