@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="views.AfficherPromoFrontController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="89.0" prefWidth="970.0" style="-fx-background-color: #332A7C;">
+         <children>
+            <Label layoutX="290.0" layoutY="25.0" text="Nos Promotions">
+               <font>
+                  <Font name="Lucida Console" size="38.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.33809523809523806" startX="0.1714285714285714" startY="0.023809523809523836">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="#8a2424" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="produits" layoutX="63.0" layoutY="118.0" prefHeight="581.0" prefWidth="778.0">
+         <children>
+            <HBox layoutX="48.0" layoutY="-6.0" prefHeight="591.0" prefWidth="830.0">
+               <children>
+                  <ScrollPane fx:id="tableid" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="791.0">
+                     <content>
+                        <GridPane fx:id="grid" prefHeight="47.0" prefWidth="52.0">
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                           </rowConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
