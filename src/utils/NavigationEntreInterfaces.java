@@ -15,10 +15,10 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author House_Info
+ * @author user
  */
 public class NavigationEntreInterfaces {
-     public void navigate(ActionEvent event,String title,String url) throws IOException{
+    public void navigate(ActionEvent event,String title,String url) throws IOException{
      
      ((Node)event.getSource()).getScene().getWindow().hide();
      Parent root = FXMLLoader.load(getClass().getResource(url));
@@ -27,5 +27,5 @@ public class NavigationEntreInterfaces {
      stage.setScene(scene);
      stage.setTitle(title);
      stage.show();
-}
+ }
 }
