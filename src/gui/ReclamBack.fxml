@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidevjava.gui.ReclamBackController">
+   <children>
+      <TableView fx:id="list_tbl" layoutX="60.0" layoutY="302.0" onMouseClicked="#OnSelect" prefHeight="330.0" prefWidth="668.0" style="b: #3cb371;">
+         <columns>
+            <TableColumn fx:id="collSujet" prefWidth="171.66668701171875" text="Sujet" />
+            <TableColumn fx:id="Desc_coll" prefWidth="322.33331298828125" text="Description" />
+            <TableColumn fx:id="date_coll" prefWidth="173.6666259765625" text="Date" />
+         </columns>
+      </TableView>
+      <Label layoutX="600.0" layoutY="149.0" />
+      <Text fill="#332a7c" layoutX="242.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des réclamations">
+         <font>
+            <Font name="Candara Bold" size="32.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="rech_btn" fitHeight="74.0" fitWidth="71.0" layoutX="310.0" layoutY="179.0" onMouseClicked="#Rechercher" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/icons8-view-100.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="rech_txt" focusColor="#332a7c" labelFloat="true" layoutX="65.0" layoutY="185.0" prefHeight="49.0" prefWidth="229.0" promptText="Recherche" unFocusColor="#332a7c" />
+      <Button fx:id="delete_btn" layoutX="675.0" layoutY="632.0" mnemonicParsing="false" onAction="#OnSupp" prefHeight="64.0" prefWidth="58.0" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-delete-bin-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="pdf_btn1" layoutX="638.0" layoutY="174.0" mnemonicParsing="false" onAction="#pdf" prefHeight="79.0" prefWidth="84.0" style="-fx-background-color: #00000000;">
+         <graphic>
+            <ImageView fitHeight="74.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-pdf-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
