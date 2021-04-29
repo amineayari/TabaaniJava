@@ -4,41 +4,39 @@
  * and open the template in the editor.
  */
 package utils;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 /**
  *
- * @author House_Info
+ * @author user
  */
 public class DataSource {
-    private static String url ="jdbc:mysql://localhost:3306/tabaaniv2.0";
-   
-    private static Connection conn;
- 
-    static DataSource instance;
+    private String url="jdbc:mysql://127.0.0.1/dbase";
+    private String login="root";
+    private String pwd="";
+    private Connection cnx;
     
-    public DataSource() {
-        
+    private static DataSource instance;
+    
+    private DataSource() {
         try {
-            conn = DriverManager.getConnection(url, "root","");
-            System.out.println(" connecté !!!!");
-
+            cnx=DriverManager.getConnection(url, login, pwd);
+            System.out.println("Connexion étabie");
         } catch (SQLException ex) {
-            Logger.getLogger(DataSource.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getMessage());
         }
     }
-    
     public static DataSource getInstance(){
-        if(instance == null)
-            instance = new DataSource();
-        
+        if(instance==null)
+            instance=new DataSource();
         return instance;
     }
 
-    public static Connection getConn() {
-        return conn;
+    public Connection getCnx() {
+        return cnx;
     }
+    
 }
