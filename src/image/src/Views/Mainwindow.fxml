@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1081.0" style="-fx-background-color: #31307D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.MainwindowController">
+   <children>
+      <AnchorPane prefHeight="102.0" prefWidth="1081.0" style="-fx-background-color: f82249;">
+         <children>
+            <ImageView fitHeight="69.0" fitWidth="86.0" layoutX="39.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/logotabaani.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="search" layoutX="700.0" layoutY="39.0" onInputMethodTextChanged="#ttest2" onKeyPressed="#test" onKeyReleased="#Search" onKeyTyped="#LettersOnly" prefHeight="26.0" prefWidth="240.0" promptText="Recherche" style="-fx-background-color: white; -fx-border-color: blue;" />
+            <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="956.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/searchcircularbutton_79274.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="PrixField" layoutX="126.0" layoutY="229.0" style="-fx-background-color: white;" />
+      <TextField fx:id="QuantiteField" layoutX="128.0" layoutY="293.0" style="-fx-background-color: white;" />
+      <Button fx:id="parcourir" layoutX="128.0" layoutY="399.0" mnemonicParsing="false" onAction="#Parcourir_Produit" prefHeight="30.0" prefWidth="152.0" text="Parcourir" />
+      <Label layoutX="34.0" layoutY="165.0" text="Nom" textFill="#00fffb">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="41.0" layoutY="225.0" text="Prix" textFill="#00fffb">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="289.0" text="Quantite" textFill="#00fffb">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="28.0" layoutY="345.0" text="Image" textFill="#00fffb">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TableView fx:id="Table_Produit" layoutX="336.0" layoutY="139.0" onMouseClicked="#getSelected" onZoom="#dut" prefHeight="489.0" prefWidth="745.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="idproduit" prefWidth="54.0" text="ID" />
+          <TableColumn fx:id="nomproduit" prefWidth="119.0" text="Nom" />
+            <TableColumn fx:id="prixproduit" prefWidth="103.0" text="Prix" />
+            <TableColumn fx:id="quantiteproduit" prefWidth="110.0" text="Quantite" />
+            <TableColumn fx:id="imageproduit" prefWidth="221.0" text="Image" />
+            <TableColumn fx:id="avisproduit" prefWidth="136.0" text="Avis" />
+        </columns>
+      </TableView>
+      <Button layoutX="61.0" layoutY="455.0" mnemonicParsing="false" onAction="#Ajouter_Produit" prefHeight="30.0" prefWidth="152.0" text="Ajouter" />
+      <Button fx:id="Modifier_Produit" layoutX="61.0" layoutY="516.0" mnemonicParsing="false" onAction="#Modifier_Produit" prefHeight="30.0" prefWidth="152.0" text="Modifier" />
+      <Button layoutX="61.0" layoutY="572.0" mnemonicParsing="false" onAction="#Supprimer_Produit" prefHeight="30.0" prefWidth="152.0" text="Supprimer" />
+      <TextField fx:id="ImageField" layoutX="130.0" layoutY="350.0" onMouseClicked="#getSelected" style="-fx-background-color: white;" />
+      <TextField fx:id="NomField" layoutX="126.0" layoutY="170.0" style="-fx-background-image: white;" />
+      <Pagination fx:id="pagination" layoutX="473.0" layoutY="628.0" prefHeight="46.0" prefWidth="442.0" />
+      <Button layoutX="61.0" layoutY="628.0" mnemonicParsing="false" onAction="#stat" prefHeight="32.0" prefWidth="152.0" text="stat" />
+      <Button layoutX="1015.0" layoutY="639.0" mnemonicParsing="false" onAction="#Front" text="Front" />
+      <Button layoutX="357.0" layoutY="639.0" mnemonicParsing="false" onAction="#CommandeBack" prefHeight="32.0" prefWidth="124.0" text="Commande" />
+   </children>
+</AnchorPane>
