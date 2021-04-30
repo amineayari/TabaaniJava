@@ -11,15 +11,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.SidebarController">
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.SidebbarController">
    <children>
       <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1336.0">
          <left>
-            <VBox prefHeight="702.0" prefWidth="200.0" style="-fx-background-color: #332A7C;" BorderPane.alignment="CENTER">
+            <VBox prefHeight="560.0" prefWidth="200.0" style="-fx-background-color: #332A7C;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="151.0" fitWidth="172.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="151.0" fitWidth="207.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Image/logo.png" />
+                        <Image url="@../Images/logo.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" prefHeight="17.0" prefWidth="220.0" text="Tabaani" textAlignment="RIGHT" textFill="WHITE">
@@ -31,10 +31,10 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-around-the-globe-100%20(1).png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="voyage" alignment="CENTER" mnemonicParsing="false" onAction="#appel" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Voyage" textFill="WHITE">
+                        <Button fx:id="voyage_btn" alignment="CENTER" mnemonicParsing="false" onAction="#voyage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Voyage" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -45,7 +45,7 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/centre.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="heb_btn" mnemonicParsing="false" onAction="#hebergement" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Hebergement" textFill="WHITE">
@@ -59,7 +59,7 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-car-roof-box-100.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="transport_btn" mnemonicParsing="false" onAction="#transport" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Transport" textFill="WHITE">
@@ -73,10 +73,10 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-discount-100.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="prom_btn" mnemonicParsing="false" onAction="#app" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Promotion" textFill="WHITE">
+                        <Button fx:id="prom_btn" mnemonicParsing="false" onAction="#promotion" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Promotion" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -87,7 +87,7 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-buying-100.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="reserv_btn" mnemonicParsing="false" onAction="#reservation" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Réservation" textFill="WHITE">
@@ -101,7 +101,7 @@
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-star-filled-100.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
                         <Button fx:id="sondage_btn" mnemonicParsing="false" onAction="#sondage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Sondage" textFill="WHITE">
@@ -111,62 +111,56 @@
                         </Button>
                      </children>
                   </HBox>
-                  <HBox prefHeight="54.0" prefWidth="229.0" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <HBox prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="prod_btn" mnemonicParsing="false" onAction="#produit" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Produits" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="cmd_btn" mnemonicParsing="false" onAction="#commande" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Commande" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <HBox prefHeight="54.0" prefWidth="203.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
-                           <children>
-                              <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Image/icons8-grocery-shelf-100.png" />
-                                 </image>
-                              </ImageView>
-                              <Button fx:id="sondage_btn4" mnemonicParsing="false" onAction="#sondage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Produits" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
-                     <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-red-shopping-basket-100.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="sondage_btn1" mnemonicParsing="false" onAction="#sondage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Commande" textFill="WHITE">
+                        <Button fx:id="forum_btn" mnemonicParsing="false" onAction="#forum" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Forum" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Button>
                      </children>
                   </HBox>
-                  <HBox prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-messaging-100.png" />
+                              <Image url="@../Images/icons8-around-the-globe-100.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="sondage_btn2" mnemonicParsing="false" onAction="#sondage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Forum" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="53.0" prefWidth="187.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 2px 0px 2px 0px;">
-                     <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Image/icons8-agreement-100.png" />
-                           </image>
-                        </ImageView>
-                        <Button fx:id="sondage_btn3" mnemonicParsing="false" onAction="#sondage" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Reclamation" textFill="WHITE">
+                        <Button fx:id="reclam_btn" mnemonicParsing="false" onAction="#reclamation" prefHeight="46.0" prefWidth="139.0" style="-fx-background-color: transparent;" text="Réclamation" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -177,27 +171,24 @@
             </VBox>
          </left>
          <center>
-            <AnchorPane fx:id="ap" accessibleRole="IMAGE_VIEW" prefHeight="762.0" prefWidth="969.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-               <children>
-                  <AnchorPane fx:id="pp" layoutX="1.0" layoutY="4.0" prefHeight="710.0" prefWidth="965.0" />
-               </children></AnchorPane>
+            <AnchorPane fx:id="ap" accessibleRole="IMAGE_VIEW" prefHeight="762.0" prefWidth="969.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
          </center>
          <right>
             <VBox prefHeight="700.0" prefWidth="167.0" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fx:id="user_image" fitHeight="120.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-width: 2px 2px 2px 2px; -fx-border-color: #FFFFFF;">
+                     <image>
+                        <Image url="@../Images/image_6487327.JPG" />
+                     </image>
                      <VBox.margin>
                         <Insets bottom="10.0" left="23.0" top="10.0" />
                      </VBox.margin>
-                     <image>
-                        <Image url="@Image/signin.png" />
-                     </image>
                   </ImageView>
                   <Button fx:id="profile_btn" mnemonicParsing="false" onAction="#GererProfile" prefHeight="48.0" prefWidth="118.0" style="-fx-background-color: #00000000;" text="Profile">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/profile.png" />
+                              <Image url="@../Images/profile.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -206,7 +197,7 @@
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/changePassword.png" />
+                              <Image url="@../Images/changePassword.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -215,7 +206,7 @@
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Image/icons8-cancel-50.png" />
+                              <Image url="@../Images/logout.png" />
                            </image>
                         </ImageView>
                      </graphic>

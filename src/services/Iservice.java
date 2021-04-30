@@ -9,12 +9,14 @@ import java.util.List;
 
 /**
  *
- * @author House_Info
- * @param <A>
+ * @author BJI
  */
-public interface Iservice <A> {
-  public void ajouter( A t);
-  public void supprimer( int t);
-  public void modifier( A t);
-  public List<A> afficher();
+public interface Iservice <T>{
+       
+    void Ajouter (T t) ; 
+    List<T> Afficher() ; 
+    T TrouverById (int id) ; 
+    void Modifier (T t) ; 
+    void Supprimer (int id) ; 
+    
 }
